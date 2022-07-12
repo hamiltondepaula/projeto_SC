@@ -1,0 +1,21 @@
+/*quando todas as pastas estiverem no diretório público do apache(htdocs) dentro de uma pasta chamada projeto_SC,
+crie o banco de dados em localhost/phpmyadmin/ usando as instruções abaixo diretamente no SQL*/
+
+CREATE DATABASE projeto_SC;
+
+USE projeto_SC;
+
+CREATE TABLE tb_usuarios(
+	id int AUTO_INCREMENT PRIMARY KEY, 
+	nome varchar(40),
+	email varchar(40),
+	senha varchar(32)
+);
+
+CREATE TABLE tb_comentarios(
+	id int AUTO_INCREMENT PRIMARY KEY, 
+	comentarios varchar(400),
+	dia date,
+	horario varchar(5), 
+	fk_id_usuario int, 
+	FOREIGN KEY (fk_id_usuario) REFERENCES tb_usuarios(id))
