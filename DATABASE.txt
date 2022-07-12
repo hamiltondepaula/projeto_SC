@@ -1,6 +1,8 @@
 /*quando todas as pastas estiverem no diretório público do apache(htdocs) dentro de uma pasta chamada projeto_SC,
 crie o banco de dados em localhost/phpmyadmin/ usando as instruções abaixo diretamente no SQL*/
 
+//dessa forma, as tabelas serão criadas e não haverá erro de acesso ao banco de dadaos. 
+
 CREATE DATABASE projeto_SC;
 
 USE projeto_SC;
